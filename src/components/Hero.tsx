@@ -84,7 +84,7 @@ export function Hero() {
             className="hover:bg-accent/10"
             asChild
           >
-            <a href="/Ahmed_Ageib_CV.pdf" download>
+            <a href="images/Ahmed_Ageib_CV.pdf" download target="_blank">
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </a>

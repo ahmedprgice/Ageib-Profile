@@ -22,13 +22,7 @@ export function Education() {
       date: '2025',
       link: 'https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e'
     },
-    {
-      name: 'Kubernetes Application Developer (CKAD)',
-      issuer: 'Cloud Native Computing Foundation',
-      date: '2022',
-      credentialId: 'CKAD-2022-GHI',
-      link: 'https://www.credly.com/badges/your-link-here'
-    }
+    
   ];
 
   return (
