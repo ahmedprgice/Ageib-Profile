@@ -59,6 +59,7 @@ export function Skills() {
         { name: 'django', level: 90 },
         { name: 'Git & GitHub', level: 85 },
         { name: 'REST APIs', level: 75 },
+        { name: "Node.js", level: 75 },
       ]
     }
   ];

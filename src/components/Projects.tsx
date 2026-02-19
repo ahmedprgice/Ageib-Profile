@@ -4,35 +4,66 @@ import { Badge } from './ui/badge';
 
 export function Projects() {
   const projects = [
-    {
-      name: 'MindfulMe – AI Emotional Support App',
-      description:
-        'A calming AI-powered emotional support mobile app designed for teens and young adults. Includes AI personalities, journaling, mood tracking, relaxing games, and private notes in a safe and minimal environment.',
-      tech: ['Mobile UI/UX', 'AI Chat', 'Mental Health UX', 'Design System'],
-      outcome: 'Complete mobile app UX flow designed end-to-end',
-      image: '/images/projcet1.png',
-      github: 'https://github.com/ahmedprgice/Emotional-Support-project',
-      demo: 'https://emotional-support-project.vercel.app/'
-    },
+ {
+  name: 'MindfulMe – AI Emotional Support Web App',
+  description:
+    'Built a full-stack AI-powered emotional support platform designed for teens and young adults. Features multiple AI personalities, journaling system, mood tracking, interactive mini-games, and secure private notes within a calming, minimal UI.',
+  tech: [
+    'React',
+    'TypeScript',
+    'Vite',
+    'Tailwind CSS',
+    'Node.js',
+    'Express.js',
+    'Groq API',
+    'Vercel Deployment'
+  ],
+  outcome:
+    'Production-ready full-stack AI application with real-time chat integration and scalable component architecture.',
+  image: '/images/projcet1.png',
+  github: 'https://github.com/ahmedprgice/Emotional-Support-project',
+  demo: 'https://emotional-support-project.vercel.app/'
+}
+,
     {
       name: 'Urban Sea Enviro – Multi-Division Business Website',
       description:
         'Designed the full UX strategy and architecture for a multi-division corporate website covering cleaning services, e-commerce, franchise onboarding and online booking. Includes sitemap, integrations and launch roadmap.',
       tech: [
+        'PHP',
+        'Responsive Design',
         'UX Strategy',
-        'WordPress',
-        'WooCommerce',
-        'SEO',
-        'Payment Gateway',
         'Booking System'
       ],
       outcome: 'Complete website strategy & development roadmap (8-week plan)',
       image: '/images/USELOGOBG.webp',
       isLogo: true,
       github: null,
-           demo: 'https://urbanseaenviro.org/'
+      demo: 'https://urbanseaenviro.org/'
     },
-  
+    {
+      name: 'Ageib Portfolio – Developer Personal Website',
+      description:
+        'Developed a modern, fully responsive developer portfolio using React and TypeScript. Implemented reusable component architecture, dynamic experience timeline, project showcase system, and optimized production build with Vite.',
+      tech: [
+        'React',
+        'TypeScript',
+        'Vite',
+        'Tailwind CSS',
+        'Responsive Design',
+        'Vercel Deployment'
+      ],
+      outcome:
+        'Production-ready personal portfolio with clean UI system, scalable component structure, and CI/CD deployment via Vercel.',
+      image: '/images/project3.png',
+      isLogo: false,
+      github: 'https://github.com/ahmedprgice/Ageib-Profile',
+      demo: 'https://ageib-profile.vercel.app/'
+    }
+
+
+
+
   ];
 
   return (
@@ -54,20 +85,18 @@ export function Projects() {
             >
               {/* IMAGE AREA */}
               <div
-                className={`relative h-48 flex items-center justify-center overflow-hidden ${
-                  project.isLogo
-                    ? 'bg-gradient-to-br from-primary/20 via-background to-accent/20'
-                    : 'bg-gradient-to-br from-primary/10 to-accent/10'
-                }`}
+                className={`relative h-48 flex items-center justify-center overflow-hidden ${project.isLogo
+                  ? 'bg-gradient-to-br from-primary/20 via-background to-accent/20'
+                  : 'bg-gradient-to-br from-primary/10 to-accent/10'
+                  }`}
               >
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`transition-all duration-300 ${
-                    project.isLogo
-                      ? 'max-h-32 w-auto object-contain group-hover:scale-105'
-                      : 'w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105'
-                  }`}
+                  className={`transition-all duration-300 ${project.isLogo
+                    ? 'max-h-32 w-auto object-contain group-hover:scale-105'
+                    : 'w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105'
+                    }`}
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
