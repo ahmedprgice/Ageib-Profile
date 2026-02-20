@@ -59,7 +59,7 @@ export function Publications() {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-12">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
-          <h2 className="text-4xl md:text-5xl font-mono">
+          <h2 class="text-2xl md:text-5xl font-mono tracking-wide leading-tight">
             <span className="text-primary">05.</span> Publications & Open Source
           </h2>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />

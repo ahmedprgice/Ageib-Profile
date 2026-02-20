@@ -1,68 +1,116 @@
-import { GraduationCap, Award, CheckCircle2, ExternalLink } from 'lucide-react';
-import { motion } from 'motion/react';
+import { GraduationCap, Award, CheckCircle2, ExternalLink } from "lucide-react";
+import { motion } from "motion/react";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Education() {
-  const education = [
-    {
-      degree: 'Bachelor of Computer Science',
-      specialization: 'Data Science',
-      institution: 'Multimedia University Malaysia (MMU)',
-      period: '2023 - 2026',
-      gpa: '3.3/4.0',
-      description:
-        'Focus on Deep Learning, Natural Language Processing, and Reinforcement Learning',
-      highlights: []
-    }
-  ];
+  const { language } = useLanguage();
 
-  const certifications = [
-    {
-      name: 'Career Essentials in Data Analysis',
-      issuer: 'Microsoft & LinkedIn Learning',
-      date: '2025',
-      link: 'https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e'
-    },
-    
-  ];
+  const education =
+    language === "en"
+      ? [
+          {
+            degree: "Bachelor of Computer Science",
+            specialization: "Data Science",
+            institution: "Multimedia University Malaysia (MMU)",
+            period: "2023 - 2026",
+            gpa: "3.3/4.0",
+            description:
+              "Focus on Deep Learning, Natural Language Processing, and Reinforcement Learning",
+            highlights: [],
+          },
+        ]
+      : [
+          {
+            degree: "بكالوريوس علوم الحاسوب",
+            specialization: "علم البيانات",
+            institution: "جامعة الوسائط المتعددة - ماليزيا (MMU)",
+            period: "٢٠٢٣ - ٢٠٢٦",
+            gpa: "٣.٣ / ٤.٠",
+            description:
+              "التركيز على التعلم العميق ومعالجة اللغة الطبيعية والتعلم المعزز",
+            highlights: [],
+          },
+        ];
+
+  const certifications =
+    language === "en"
+      ? [
+          {
+            name: "Career Essentials in Data Analysis",
+            issuer: "Microsoft & LinkedIn Learning",
+            date: "2025",
+            link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
+          },
+        ]
+      : [
+          {
+            name: "أساسيات تحليل البيانات المهنية",
+            issuer: "مايكروسوفت و لينكدإن للتعلم",
+            date: "٢٠٢٥",
+            link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
+          },
+        ];
 
   return (
     <section id="education" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-12">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
-          <h2 className="text-4xl md:text-5xl font-mono">
-            <span className="text-primary">05.</span> Education & Certifications
-          </h2>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
-        </div>
+        {/* Animated Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <div className="inline-block">
+            <h2 className="text-3xl md:text-5xl font-mono tracking-wide leading-tight">
+              <span className="text-primary">
+                {language === "en" ? "05." : "٠٥."}
+              </span>{" "}
+              <span className="text-foreground">
+                {language === "en"
+                  ? "Education & Certifications"
+                  : "التعليم والشهادات"}
+              </span>
+            </h2>
+
+            <div className="mt-4 mb-6 h-px w-full bg-gradient-to-r from-cyan-400 to-blue-500" />
+          </div>
+        </motion.div>
 
         {/* EDUCATION */}
         <div className="mb-16">
           <h3 className="text-2xl mb-6 flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-accent" />
-            Education
+            {language === "en" ? "Education" : "التعليم"}
           </h3>
 
           {education.map((edu, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              transition={{ delay: index * 0.15 }}
               className="bg-card border border-border rounded-xl p-8"
             >
               <h4 className="text-2xl mb-2">{edu.degree}</h4>
               <p className="text-lg text-primary">{edu.institution}</p>
-              <p className="text-sm text-accent font-mono">{edu.specialization}</p>
+              <p className="text-sm text-accent font-mono">
+                {edu.specialization}
+              </p>
 
               <div className="flex gap-6 mt-3 text-sm">
-                <span className="text-muted-foreground font-mono">{edu.period}</span>
+                <span className="text-muted-foreground font-mono">
+                  {edu.period}
+                </span>
                 <span className="text-accent font-medium">{edu.gpa}</span>
               </div>
 
-              <p className="mt-4 text-muted-foreground">{edu.description}</p>
+              <p className="mt-4 text-muted-foreground">
+                {edu.description}
+              </p>
 
               <div className="mt-4 space-y-2">
                 {edu.highlights.map((highlight, i) => (
@@ -80,17 +128,20 @@ export function Education() {
         <div>
           <h3 className="text-2xl mb-6 flex items-center gap-2">
             <Award className="h-6 w-6 text-accent" />
-            Professional Certifications
+            {language === "en"
+              ? "Professional Certifications"
+              : "الشهادات المهنية"}
           </h3>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                transition={{ delay: index * 0.2 }}
+                whileHover={{ y: -6 }}
                 className="bg-card border border-border rounded-xl p-6 hover:border-accent/50 transition-all"
               >
                 <div className="flex items-start gap-3 mb-3">
@@ -104,13 +155,9 @@ export function Education() {
                   </div>
                 </div>
 
-                {/* Footer */}
                 <div className="flex items-center justify-between mt-4 pt-4 border-t border-border/50">
                   <div className="text-xs text-muted-foreground font-mono">
                     {cert.date}
-                    {cert.credentialId && (
-                      <div className="opacity-60">{cert.credentialId}</div>
-                    )}
                   </div>
 
                   {cert.link && (
@@ -120,7 +167,9 @@ export function Education() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 text-xs text-accent hover:text-primary transition-colors"
                     >
-                      View Certificate
+                      {language === "en"
+                        ? "View Certificate"
+                        : "عرض الشهادة"}
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   )}

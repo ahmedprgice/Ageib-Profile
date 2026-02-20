@@ -1,69 +1,111 @@
-import { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { toast } from 'sonner@2.0.3';
+import { useState } from "react";
+import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { toast } from "sonner";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Contact() {
+  const { language } = useLanguage();
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock form submission
-    toast.success('Message sent! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+
+    toast.success(
+      language === "en"
+        ? "Message sent! I'll get back to you soon."
+        : "تم إرسال الرسالة بنجاح! سأقوم بالرد عليك قريباً."
+    );
+
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  const socialLinks = [
-    {
-      name: 'Email',
-      icon: Mail,
-      url: 'mailto:ahmedageibemail01@gmail.com',
-      handle: 'ahmedageibemail01@gmail.com'
-    },
-    {
-      name: 'GitHub',
-      icon: Github,
-      url: 'https://github.com/ahmedprgice',
-      handle: '@ahmedprgice'
-    },
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      url: 'https://www.linkedin.com/in/ahmed-ageib/',
-      handle: '/in/Ahmed Ageib'
-    },
-
-  ];
+  const socialLinks =
+    language === "en"
+      ? [
+          {
+            name: "Email",
+            icon: Mail,
+            url: "mailto:ahmedageibemail01@gmail.com",
+            handle: "ahmedageibemail01@gmail.com",
+          },
+          {
+            name: "GitHub",
+            icon: Github,
+            url: "https://github.com/ahmedprgice",
+            handle: "@ahmedprgice",
+          },
+          {
+            name: "LinkedIn",
+            icon: Linkedin,
+            url: "https://www.linkedin.com/in/ahmed-ageib/",
+            handle: "/in/Ahmed Ageib",
+          },
+        ]
+      : [
+          {
+            name: "البريد الإلكتروني",
+            icon: Mail,
+            url: "mailto:ahmedageibemail01@gmail.com",
+            handle: "ahmedageibemail01@gmail.com",
+          },
+          {
+            name: "جيت هاب",
+            icon: Github,
+            url: "https://github.com/ahmedprgice",
+            handle: "@ahmedprgice",
+          },
+          {
+            name: "لينكدإن",
+            icon: Linkedin,
+            url: "https://www.linkedin.com/in/ahmed-ageib/",
+            handle: "/in/Ahmed Ageib",
+          },
+        ];
 
   return (
     <section id="contact" className="py-24 px-6 bg-card/30">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-3 mb-12">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
-          <h2 className="text-4xl md:text-5xl font-mono">
-            <span className="text-primary">06.</span> Get In Touch
-          </h2>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
+
+        {/* Title */}
+        <div className="text-center mb-20">
+          <div className="inline-block">
+            <h2 className="text-3xl md:text-5xl font-mono tracking-wide leading-tight">
+              <span className="text-primary">
+                {language === "en" ? "06." : "٠٦."}
+              </span>{" "}
+              <span className="text-foreground">
+                {language === "en" ? "Get In Touch" : "تواصل معي"}
+              </span>
+            </h2>
+
+            <div className="mt-4 mb-6 h-px w-full bg-gradient-to-r from-cyan-400 to-blue-500" />
+          </div>
         </div>
 
+        {/* Intro Text */}
         <div className="text-center mb-12">
           <p className="text-xl text-foreground/80 mb-4">
-            I'm currently open to new opportunities and interesting projects.
+            {language === "en"
+              ? "I'm currently open to new opportunities and interesting projects."
+              : "أنا منفتح حالياً لفرص جديدة ومشاريع مميزة."}
           </p>
+
           <p className="text-lg text-muted-foreground">
-            Whether you have a question, want to collaborate, or just want to say hi,
-            feel free to reach out!
+            {language === "en"
+              ? "Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!"
+              : "سواء كان لديك سؤال، ترغب في التعاون، أو فقط تريد إلقاء التحية، لا تتردد في التواصل!"}
           </p>
         </div>
 
-        {/* Social links */}
-        {/* Social links */}
+        {/* Social Links */}
         <div className="flex justify-center mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl w-full">
             {socialLinks.map((social, index) => (
@@ -76,73 +118,90 @@ export function Contact() {
               >
                 <social.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
                 <div className="text-center">
-                  <p className="font-mono text-sm text-muted-foreground">{social.name}</p>
-                  <p className="text-xs text-foreground/60 mt-1">{social.handle}</p>
+                  <p className="font-mono text-sm text-muted-foreground">
+                    {social.name}
+                  </p>
+                  <p className="text-xs text-foreground/60 mt-1">
+                    {social.handle}
+                  </p>
                 </div>
-
               </a>
             ))}
           </div>
         </div>
 
-        {/* Contact form */}
+        {/* Contact Form */}
         <div className="bg-background border border-primary/20 rounded-lg p-8">
-          <h3 className="text-2xl mb-6 text-center">Send a Message</h3>
+          <h3 className="text-2xl mb-6 text-center">
+            {language === "en" ? "Send a Message" : "إرسال رسالة"}
+          </h3>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+
+            {/* Name */}
             <div>
-              <label htmlFor="name" className="block mb-2 text-sm text-muted-foreground">
-                Name
+              <label className="block mb-2 text-sm text-muted-foreground">
+                {language === "en" ? "Name" : "الاسم"}
               </label>
               <Input
-                id="name"
                 type="text"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="Your name"
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                placeholder={
+                  language === "en" ? "Your name" : "اكتب اسمك"
+                }
                 required
-                className="bg-card border-border focus:border-primary"
               />
             </div>
 
+            {/* Email */}
             <div>
-              <label htmlFor="email" className="block mb-2 text-sm text-muted-foreground">
-                Email
+              <label className="block mb-2 text-sm text-muted-foreground">
+                {language === "en" ? "Email" : "البريد الإلكتروني"}
               </label>
               <Input
-                id="email"
                 type="email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="your.email@example.com"
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                placeholder={
+                  language === "en"
+                    ? "your.email@example.com"
+                    : "example@email.com"
+                }
                 required
-                className="bg-card border-border focus:border-primary"
               />
             </div>
 
+            {/* Message */}
             <div>
-              <label htmlFor="message" className="block mb-2 text-sm text-muted-foreground">
-                Message
+              <label className="block mb-2 text-sm text-muted-foreground">
+                {language === "en" ? "Message" : "الرسالة"}
               </label>
               <Textarea
-                id="message"
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                placeholder="Your message..."
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                placeholder={
+                  language === "en"
+                    ? "Your message..."
+                    : "اكتب رسالتك هنا..."
+                }
                 rows={6}
                 required
-                className="bg-card border-border focus:border-primary resize-none"
               />
             </div>
 
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 group"
-            >
+            {/* Button */}
+            <Button type="submit" size="lg" className="w-full group">
               <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              Send Message
+              {language === "en" ? "Send Message" : "إرسال الرسالة"}
             </Button>
+
           </form>
         </div>
       </div>
