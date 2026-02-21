@@ -8,48 +8,81 @@ export function Education() {
   const education =
     language === "en"
       ? [
-          {
-            degree: "Bachelor of Computer Science",
-            specialization: "Data Science",
-            institution: "Multimedia University Malaysia (MMU)",
-            period: "2023 - 2026",
-            gpa: "3.3/4.0",
-            description:
-              "Focus on Deep Learning, Natural Language Processing, and Reinforcement Learning",
-            highlights: [],
-          },
-        ]
+        {
+          degree: "Bachelor of Computer Science",
+          specialization: "Data Science",
+          institution: "Multimedia University Malaysia (MMU)",
+          period: "2023 - 2026",
+          gpa: "3.3/4.0",
+          description:
+            "Focus on Deep Learning, Natural Language Processing, and Reinforcement Learning",
+          logo: "/images/mmu.png",
+          highlights: [],
+        },
+      ]
       : [
-          {
-            degree: "بكالوريوس علوم الحاسوب",
-            specialization: "علم البيانات",
-            institution: "جامعة الوسائط المتعددة - ماليزيا (MMU)",
-            period: "٢٠٢٣ - ٢٠٢٦",
-            gpa: "٣.٣ / ٤.٠",
-            description:
-              "التركيز على التعلم العميق ومعالجة اللغة الطبيعية والتعلم المعزز",
-            highlights: [],
-          },
-        ];
+        {
+          degree: "بكالوريوس علوم الحاسوب",
+          specialization: "علم البيانات",
+          institution: "جامعة الوسائط المتعددة - ماليزيا (MMU)",
+          period: "٢٠٢٣ - ٢٠٢٦",
+          gpa: "٣.٣ / ٤.٠",
+          description:
+            "التركيز على التعلم العميق ومعالجة اللغة الطبيعية والتعلم المعزز",
+          logo: "/images/mmu.png",
+          highlights: [],
+        },
+      ];
 
   const certifications =
     language === "en"
       ? [
-          {
-            name: "Career Essentials in Data Analysis",
-            issuer: "Microsoft & LinkedIn Learning",
-            date: "2025",
-            link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
-          },
-        ]
+     {
+          name: "Career Essentials in Data Analysis",
+          issuer: "Microsoft & LinkedIn Learning",
+          date: "Oct 2025",
+          link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
+          logo: "/images/microsoft.png",
+          
+        },
+        {
+          name: "Learning Data Analytics: 1 Foundations",
+          issuer: "LinkedIn Learning",
+          date: "2025",
+          link: "https://www.linkedin.com/learning/certificates/40efc6d72569bceaab0ba08500d00627c1e384aeac5274aea95814a4bf433310?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+        {
+          name: "Introduction to Career Skills in Data Analytics",
+          issuer: "LinkedIn Learning",
+          date: "Oct 2025",
+          link: "https://www.linkedin.com/learning/certificates/9ee3bae17bf43ebf6d974dc53a163a1c461e9b5778bdf16ab662e43a7ea92ccc?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+      ]
       : [
-          {
-            name: "أساسيات تحليل البيانات المهنية",
-            issuer: "مايكروسوفت و لينكدإن للتعلم",
-            date: "٢٠٢٥",
-            link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
-          },
-        ];
+         {
+          name: "أساسيات تحليل البيانات المهنية",
+          issuer: "مايكروسوفت و لينكدإن للتعلم",
+          date: "أكتوبر ٢٠٢٥",
+          link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
+          logo: "/images/microsoft.png",
+        },
+        {
+          name: "تعلم تحليل البيانات: الأساسيات",
+          issuer: "لينكدإن للتعلم",
+          date: "٢٠٢٥",
+          link: "https://www.linkedin.com/learning/certificates/40efc6d72569bceaab0ba08500d00627c1e384aeac5274aea95814a4bf433310?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+        {
+          name: "مقدمة في مهارات المسار المهني في تحليل البيانات",
+          issuer: "لينكدإن للتعلم",
+          date: "أكتوبر ٢٠٢٥",
+          link: "https://www.linkedin.com/learning/certificates/9ee3bae17bf43ebf6d974dc53a163a1c461e9b5778bdf16ab662e43a7ea92ccc?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+      ];
 
   return (
     <section id="education" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6">
