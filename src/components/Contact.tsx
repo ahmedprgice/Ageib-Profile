@@ -6,6 +6,8 @@ import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
 import { useLanguage } from "../context/LanguageContext";
 
+import emailjs from "@emailjs/browser";
+
 export function Contact() {
   const { language } = useLanguage();
 
@@ -14,6 +16,39 @@ export function Contact() {
     email: "",
     message: "",
   });
+
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
+
+    toast.success(
+      language === "en"
+        ? "Message sent successfully!"
+        : "تم إرسال الرسالة بنجاح!"
+    );
+
+    setFormData({ name: "", email: "", message: "" });
+
+  } catch (error) {
+    toast.error(
+      language === "en"
+        ? "Something went wrong. Try again."
+        : "حدث خطأ، حاول مرة أخرى."
+    );
+  }
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,6 +61,7 @@ export function Contact() {
 
     setFormData({ name: "", email: "", message: "" });
   };
+
 
   const socialLinks =
     language === "en"
