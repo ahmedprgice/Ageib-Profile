@@ -50,17 +50,6 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    toast.success(
-      language === "en"
-        ? "Message sent! I'll get back to you soon."
-        : "تم إرسال الرسالة بنجاح! سأقوم بالرد عليك قريباً."
-    );
-
-    setFormData({ name: "", email: "", message: "" });
-  };
 
 
   const socialLinks =
