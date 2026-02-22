@@ -67,7 +67,7 @@ export function Navigation() {
               {"<"}
             </span>
             <span className="group-hover:text-primary transition-colors">
-              AI
+              AGEIB
             </span>
             <span className="text-primary group-hover:text-accent transition-colors">
               {"/>"}
