@@ -66,6 +66,22 @@ export function Projects() {
               "https://github.com/ahmedprgice/Ageib-Profile",
             demo: "https://ageib-profile.vercel.app/",
           },
+         {
+              name: "Snake Game in C++",
+              description:
+                "A classic console-based Snake Game implemented in C++ using <iostream>, <conio.h>, and <windows.h>. Features include snake movement, fruit collection, score tracking, tail growth, and collision detection with colored console output.",
+              tech: [
+                "C++",
+                "OOP Concepts",
+                "Console Application",
+                "Windows API"
+              ],
+              outcome:
+                "Fully functional console-based Snake Game with dynamic gameplay and score system.",
+              image: "/images/snake.png", // replace with your actual image path
+             github:
+                          "https://github.com/ahmedprgice/Snake-game",
+          },
         ]
       : [
           {
@@ -120,6 +136,22 @@ export function Projects() {
               "https://github.com/ahmedprgice/Ageib-Profile",
             demo: "https://ageib-profile.vercel.app/",
           },
+        {
+  name: "لعبة الثعبان بلغة ++C",
+  description:
+    "لعبة الثعبان الكلاسيكية تعمل عبر سطر الأوامر (Console) ومطورة بلغة ++C باستخدام المكتبات <iostream> و <conio.h> و <windows.h>. تتضمن حركة الثعبان، ظهور الفاكهة بشكل عشوائي، نظام تسجيل النقاط، زيادة طول الذيل، واكتشاف الاصطدام مع الجدران أو الذيل مع عرض ملون داخل الطرفية.",
+  tech: [
+    "++C",
+    "مفاهيم البرمجة كائنية التوجه (OOP)",
+    "تطبيق سطر الأوامر (Console)",
+    "Windows API"
+  ],
+  outcome:
+    "لعبة ثعبان متكاملة تعمل عبر الطرفية مع نظام نقاط وتفاعل ديناميكي أثناء اللعب.",
+  image: "/images/snake.png",
+  github:
+    "https://github.com/ahmedprgice/Snake-game",
+},
         ];
 
   return (
