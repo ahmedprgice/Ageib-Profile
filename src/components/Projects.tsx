@@ -10,149 +10,148 @@ export function Projects() {
   const projects =
     language === "en"
       ? [
-          {
-            name: "MindfulMe – AI Emotional Support Web App",
-            description:
-              "Built a full-stack AI-powered emotional support platform designed for teens and young adults. Features multiple AI personalities, journaling system, mood tracking, interactive mini-games, and secure private notes within a calming, minimal UI.",
-            tech: [
-              "React",
-              "TypeScript",
-              "Vite",
-              "Tailwind CSS",
-              "Node.js",
-              "Express.js",
-              "Groq API",
-              "Vercel Deployment",
-            ],
-            outcome:
-              "Production-ready full-stack AI application with real-time chat integration and scalable component architecture.",
-            image: "/images/projcet1.png",
-            github:
-              "https://github.com/ahmedprgice/Emotional-Support-project",
-            demo: "https://emotional-support-project.vercel.app/",
-          },
-          {
-            name: "Urban Sea Enviro – Multi-Division Business Website",
-            description:
-              "Designed the full UX strategy and architecture for a multi-division corporate website covering cleaning services, e-commerce, franchise onboarding and online booking.",
-            tech: [
-              "PHP",
-              "Responsive Design",
-              "UX Strategy",
-              "Booking System",
-            ],
-            outcome:
-              "Complete website strategy & development roadmap (8-week plan)",
-            image: "/images/USELOGOBG.webp",
-            isLogo: true,
-            demo: "https://urbanseaenviro.org/",
-          },
-          {
-            name: "Ageib Portfolio – Developer Personal Website",
-            description:
-              "Developed a modern, fully responsive developer portfolio using React and TypeScript with scalable architecture and CI/CD deployment.",
-            tech: [
-              "React",
-              "TypeScript",
-              "Vite",
-              "Tailwind CSS",
-              "Responsive Design",
-              "Vercel Deployment",
-            ],
-            outcome:
-              "Production-ready portfolio with clean UI system and scalable structure.",
-            image: "/images/project3.png",
-            github:
-              "https://github.com/ahmedprgice/Ageib-Profile",
-            demo: "https://ageib-profile.vercel.app/",
-          },
-         {
-              name: "Snake Game in C++",
-              description:
-                "A classic console-based Snake Game implemented in C++ using <iostream>, <conio.h>, and <windows.h>. Features include snake movement, fruit collection, score tracking, tail growth, and collision detection with colored console output.",
-              tech: [
-                "C++",
-                "OOP Concepts",
-                "Console Application",
-                "Windows API"
-              ],
-              outcome:
-                "Fully functional console-based Snake Game with dynamic gameplay and score system.",
-              image: "/images/snake.png", // replace with your actual image path
-             github:
-                          "https://github.com/ahmedprgice/Snake-game",
-          },
-        ]
-      : [
-          {
-            name: "MindfulMe – منصة دعم عاطفي بالذكاء الاصطناعي",
-            description:
-              "تطوير منصة متكاملة تعتمد على الذكاء الاصطناعي للدعم العاطفي للمراهقين والشباب، تتضمن شخصيات ذكاء اصطناعي متعددة ونظام يوميات وتتبع المزاج.",
-            tech: [
-              "React",
-              "TypeScript",
-              "Vite",
-              "Tailwind CSS",
-              "Node.js",
-              "Express.js",
-            ],
-            outcome:
-              "تطبيق متكامل جاهز للإنتاج مع بنية قابلة للتوسع.",
-            image: "/images/projcet1.png",
-            github:
-              "https://github.com/ahmedprgice/Emotional-Support-project",
-            demo: "https://emotional-support-project.vercel.app/",
-          },
-          {
-            name: "Urban Sea Enviro – موقع أعمال متعدد الأقسام",
-            description:
-              "تصميم استراتيجية تجربة المستخدم وهيكلة موقع شركة متعددة الخدمات تشمل الحجز والتجارة الإلكترونية.",
-            tech: [
-              "PHP",
-              "تصميم متجاوب",
-              "استراتيجية UX",
-              "نظام حجز",
-            ],
-            outcome:
-              "خطة تطوير متكاملة لمدة ٨ أسابيع.",
-            image: "/images/USELOGOBG.webp",
-            isLogo: true,
-            demo: "https://urbanseaenviro.org/",
-          },
-          {
-            name: "Ageib Portfolio – الموقع الشخصي",
-            description:
-              "تطوير موقع شخصي احترافي باستخدام React و TypeScript مع بنية قابلة للتوسع ونشر عبر Vercel.",
-            tech: [
-              "React",
-              "TypeScript",
-              "Vite",
-              "Tailwind CSS",
-            ],
-            outcome:
-              "موقع شخصي احترافي جاهز للإنتاج.",
-            image: "/images/project3.png",
-            github:
-              "https://github.com/ahmedprgice/Ageib-Profile",
-            demo: "https://ageib-profile.vercel.app/",
-          },
         {
-  name: "لعبة الثعبان بلغة ++C",
-  description:
-    "لعبة الثعبان الكلاسيكية تعمل عبر سطر الأوامر (Console) ومطورة بلغة ++C باستخدام المكتبات <iostream> و <conio.h> و <windows.h>. تتضمن حركة الثعبان، ظهور الفاكهة بشكل عشوائي، نظام تسجيل النقاط، زيادة طول الذيل، واكتشاف الاصطدام مع الجدران أو الذيل مع عرض ملون داخل الطرفية.",
-  tech: [
-    "++C",
-    "مفاهيم البرمجة كائنية التوجه (OOP)",
-    "تطبيق سطر الأوامر (Console)",
-    "Windows API"
-  ],
-  outcome:
-    "لعبة ثعبان متكاملة تعمل عبر الطرفية مع نظام نقاط وتفاعل ديناميكي أثناء اللعب.",
-  image: "/images/snake.png",
-  github:
-    "https://github.com/ahmedprgice/Snake-game",
-},
-        ];
+          name: "MindfulMe – AI Emotional Support Web App",
+          description:
+            "Built a full-stack AI emotional support platform for teens and young adults featuring AI personalities, journaling, mood tracking, mini-games,private, and minimal interface.",
+          tech: [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "Groq API",
+            "Vercel"
+          ],
+          outcome:
+            "Production-ready full-stack AI application with real-time chat integration and scalable architecture.",
+          image: "/images/projcet1.png",
+          github:
+            "https://github.com/ahmedprgice/Emotional-Support-project",
+          demo: "https://emotional-support-project.vercel.app/",
+        },
+        {
+          name: "Urban Sea Enviro – Multi-Division Business Website",
+          description:
+            "Designed the full UX strategy and architecture for a multi-division corporate website covering cleaning services, e-commerce, franchise onboarding and online booking.",
+          tech: [
+            "PHP",
+            "Responsive Design",
+            "UX Strategy",
+            "Booking System",
+          ],
+          outcome:
+            "Complete website strategy & development roadmap (8-week plan)",
+          image: "/images/USELOGOBG.webp",
+          isLogo: true,
+          demo: "https://urbanseaenviro.org/",
+        },
+        {
+          name: "Ageib Portfolio – Developer Personal Website",
+          description:
+            "Developed a modern, fully responsive developer portfolio using React and TypeScript with scalable architecture and CI/CD deployment.",
+          tech: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Responsive Design",
+            "Vercel Deployment",
+          ],
+          outcome:
+            "Production-ready portfolio with clean UI system and scalable structure.",
+          image: "/images/project3.png",
+          github:
+            "https://github.com/ahmedprgice/Ageib-Profile",
+          demo: "https://ageib-profile.vercel.app/",
+        },
+        {
+          name: "Snake Game in C++",
+          description:
+            "A console-based Snake game built in C++ featuring snake movement, fruit collection, score tracking, tail growth, and collision detection with colored console output.",
+          tech: [
+            "C++",
+            "OOP Concepts",
+            "Console Application",
+            "Windows API"
+          ],
+          outcome:
+            "Fully functional console-based Snake Game with dynamic gameplay and score system.",
+          image: "/images/snake.png", // replace with your actual image path
+          github:
+            "https://github.com/ahmedprgice/Snake-game",
+        },
+      ]
+      : [
+        {
+          name: "MindfulMe – منصة دعم عاطفي بالذكاء الاصطناعي",
+          description:
+            "تطوير منصة متكاملة تعتمد على الذكاء الاصطناعي للدعم العاطفي للمراهقين والشباب، تتضمن شخصيات ذكاء اصطناعي متعددة ونظام يوميات وتتبع المزاج.",
+          tech: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+          ],
+          outcome:
+            "تطبيق متكامل جاهز للإنتاج مع بنية قابلة للتوسع.",
+          image: "/images/projcet1.png",
+          github:
+            "https://github.com/ahmedprgice/Emotional-Support-project",
+          demo: "https://emotional-support-project.vercel.app/",
+        },
+        {
+          name: "Urban Sea Enviro – موقع أعمال متعدد الأقسام",
+          description:
+            "تصميم استراتيجية تجربة المستخدم وهيكلة موقع شركة متعددة الخدمات تشمل الحجز والتجارة الإلكترونية.",
+          tech: [
+            "PHP",
+            "تصميم متجاوب",
+            "استراتيجية UX",
+            "نظام حجز",
+          ],
+          outcome:
+            "خطة تطوير متكاملة لمدة ٨ أسابيع.",
+          image: "/images/USELOGOBG.webp",
+          isLogo: true,
+          demo: "https://urbanseaenviro.org/",
+        },
+        {
+          name: "Ageib Portfolio – الموقع الشخصي",
+          description:
+            "تطوير موقع شخصي احترافي باستخدام React و TypeScript مع بنية قابلة للتوسع ونشر عبر Vercel.",
+          tech: [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+          ],
+          outcome:
+            "موقع شخصي احترافي جاهز للإنتاج.",
+          image: "/images/project3.png",
+          github:
+            "https://github.com/ahmedprgice/Ageib-Profile",
+          demo: "https://ageib-profile.vercel.app/",
+        },
+        {
+          name: "لعبة الثعبان بلغة ++C",
+          description:
+            "لعبة الثعبان الكلاسيكية تعمل عبر سطر الأوامر (Console) ومطورة بلغة ++C باستخدام المكتبات <iostream> و <conio.h> و <windows.h>. تتضمن حركة الثعبان، ظهور الفاكهة بشكل عشوائي، نظام تسجيل النقاط، زيادة طول الذيل، واكتشاف الاصطدام مع الجدران أو الذيل مع عرض ملون داخل الطرفية.",
+          tech: [
+            "++C",
+            "مفاهيم البرمجة كائنية التوجه (OOP)",
+            "تطبيق سطر الأوامر (Console)",
+            "Windows API"
+          ],
+          outcome:
+            "لعبة ثعبان متكاملة تعمل عبر الطرفية مع نظام نقاط وتفاعل ديناميكي أثناء اللعب.",
+          image: "/images/snake.png",
+          github:
+            "https://github.com/ahmedprgice/Snake-game",
+        },
+      ];
 
   return (
     <section id="projects" className="py-24 px-6">
@@ -191,20 +190,18 @@ export function Projects() {
             >
               {/* IMAGE */}
               <div
-                className={`relative h-48 flex items-center justify-center overflow-hidden ${
-                  project.isLogo
+                className={`relative h-48 flex items-center justify-center overflow-hidden ${project.isLogo
                     ? "bg-gradient-to-br from-primary/20 via-background to-accent/20"
                     : "bg-gradient-to-br from-primary/10 to-accent/10"
-                }`}
+                  }`}
               >
                 <img
                   src={project.image}
                   alt={project.name}
-                  className={`transition-all duration-300 ${
-                    project.isLogo
+                  className={`transition-all duration-300 ${project.isLogo
                       ? "max-h-32 w-auto object-contain group-hover:scale-105"
                       : "w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105"
-                  }`}
+                    }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               </div>
@@ -212,11 +209,7 @@ export function Projects() {
               {/* CONTENT */}
               <div className="p-6 space-y-4">
 
-                {project.isLogo && (
-                  <Badge className="bg-accent/20 text-accent border-accent/30">
-                    {language === "en" ? "Client Project" : "مشروع عميل"}
-                  </Badge>
-                )}
+                
 
                 <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
                   {project.name}
