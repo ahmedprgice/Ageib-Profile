@@ -25,7 +25,7 @@ export function Projects() {
  image: "/images/image.png",
   isLogo: false,
   demo: "https://saa-s-project-management-system-1vi.vercel.app/workspace",
-}
+},
         {
           name: "MindfulMe – AI Emotional Support Web App",
           description:
