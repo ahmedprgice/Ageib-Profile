@@ -10,22 +10,22 @@ export function Projects() {
   const projects =
     language === "en"
       ? [
-       {
-  name: "NEXORA – Enterprise Workspace Suite",
-  description:
-    "Designed and developed a modern project management and collaboration platform with task boards, real-time notes, chat, workspace organization, and team-based productivity tools.",
-  tech: [
-    "Next.js",
-    "React",
-    "Responsive Design",
-    "Task Management System",
-  ],
-  outcome:
-    "Built a complete collaborative workspace experience with board management, grouped tasks, status tracking, and scalable dashboard architecture.",
- image: "/images/image.png",
-  isLogo: false,
-  demo: "https://saa-s-project-management-system-1vi.vercel.app/workspace",
-},
+        {
+          name: "NEXORA – Enterprise Workspace Suite",
+          description:
+            "Designed and developed a modern project management and collaboration platform with task boards, real-time notes, chat, workspace organization, and team-based productivity tools.",
+          tech: [
+            "Next.js",
+            "React",
+            "Responsive Design",
+            "Task Management System",
+          ],
+          outcome:
+            "Built a complete collaborative workspace experience with board management, grouped tasks, status tracking, and scalable dashboard architecture.",
+          image: "/images/nexora.jpeg",
+          isLogo: false,
+          demo: "https://saa-s-project-management-system-1vi.vercel.app",
+        },
         {
           name: "MindfulMe – AI Emotional Support Web App",
           description:
@@ -41,7 +41,7 @@ export function Projects() {
           ],
           outcome:
             "Production-ready full-stack AI application with real-time chat integration and scalable architecture.",
-          image: "/images/projcet1.png",
+          image: "/images/Minfulme.jpeg",
           github:
             "https://github.com/ahmedprgice/Emotional-Support-project",
           demo: "https://emotional-support-project.vercel.app/",
@@ -93,28 +93,28 @@ export function Projects() {
           ],
           outcome:
             "Fully functional console-based Snake Game with dynamic gameplay and score system.",
-          image: "/images/snake.png", // replace with your actual image path
+          image: "/images/snake.png",
           github:
             "https://github.com/ahmedprgice/Snake-game",
         },
       ]
       : [
         {
-  name: "NEXORA – منصة إدارة العمل المؤسسي",
-  description:
-    "تم تصميم وتطوير منصة حديثة لإدارة المشاريع والتعاون بين الفرق، تضم لوحات للمهام، ملاحظات فورية، دردشة، تنظيم مساحات العمل، وأدوات إنتاجية مخصصة للفرق.",
-  tech: [
-    "Next.js",
-    "React",
-    "تصميم متجاوب",
-    "نظام إدارة المهام",
-  ],
-  outcome:
-    "تطوير تجربة عمل تعاونية متكاملة تشمل إدارة اللوحات، تجميع المهام، تتبع الحالات، وبنية لوحة تحكم قابلة للتوسع.",
- image: "/images/image.png",
-  isLogo: false,
-  demo: "https://saa-s-project-management-system-1vi.vercel.app/workspace",
-},
+          name: "NEXORA – منصة إدارة العمل المؤسسي",
+          description:
+            "تم تصميم وتطوير منصة حديثة لإدارة المشاريع والتعاون بين الفرق، تضم لوحات للمهام، ملاحظات فورية، دردشة، تنظيم مساحات العمل، وأدوات إنتاجية مخصصة للفرق.",
+          tech: [
+            "Next.js",
+            "React",
+            "تصميم متجاوب",
+            "نظام إدارة المهام",
+          ],
+          outcome:
+            "تطوير تجربة عمل تعاونية متكاملة تشمل إدارة اللوحات، تجميع المهام، تتبع الحالات، وبنية لوحة تحكم قابلة للتوسع.",
+          image: "/images/nexora.jpeg",
+          isLogo: false,
+          demo: "https://saa-s-project-management-system-1vi.vercel.app",
+        },
         {
           name: "MindfulMe – منصة دعم عاطفي بالذكاء الاصطناعي",
           description:
@@ -129,7 +129,7 @@ export function Projects() {
           ],
           outcome:
             "تطبيق متكامل جاهز للإنتاج مع بنية قابلة للتوسع.",
-          image: "/images/projcet1.png",
+          image: "/images/Minfulme.jpeg",
           github:
             "https://github.com/ahmedprgice/Emotional-Support-project",
           demo: "https://emotional-support-project.vercel.app/",
@@ -170,7 +170,7 @@ export function Projects() {
         {
           name: "لعبة الثعبان بلغة ++C",
           description:
-            "لعبة الثعبان الكلاسيكية تعمل عبر سطر الأوامر (Console) ومطورة بلغة ++C باستخدام المكتبات <iostream> و <conio.h> و <windows.h>. تتضمن حركة الثعبان، ظهور الفاكهة بشكل عشوائي، نظام تسجيل النقاط، زيادة طول الذيل، واكتشاف الاصطدام مع الجدران أو الذيل مع عرض ملون داخل الطرفية.",
+            "لعبة الثعبان الكلاسيكية تعمل عبر سطر الأوامر (Console) ومطورة بلغة ++C باستخدام المكتبات <iostream> و <conio.h> و <windows.h>.",
           tech: [
             "++C",
             "مفاهيم البرمجة كائنية التوجه (OOP)",
@@ -189,7 +189,6 @@ export function Projects() {
     <section id="projects" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* Animated Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -220,28 +219,29 @@ export function Projects() {
               transition={{ delay: index * 0.15 }}
               className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all"
             >
+
               {/* IMAGE */}
               <div
                 className={`relative h-48 flex items-center justify-center overflow-hidden ${project.isLogo
-                    ? "bg-gradient-to-br from-primary/20 via-background to-accent/20"
-                    : "bg-gradient-to-br from-primary/10 to-accent/10"
+                  ? "bg-gradient-to-br from-primary/20 via-background to-accent/20"
+                  : "bg-gradient-to-br from-primary/10 to-accent/10"
                   }`}
               >
                 <img
                   src={project.image}
                   alt={project.name}
                   className={`transition-all duration-300 ${project.isLogo
-                      ? "max-h-32 w-auto object-contain group-hover:scale-105"
-                      : "w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105"
+                    ? "max-h-32 w-auto object-contain group-hover:scale-105"
+                    : "w-full h-full object-cover group-hover:scale-105"
                     }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+
+                {/* lighter overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
 
               {/* CONTENT */}
               <div className="p-6 space-y-4">
-
-                
 
                 <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
                   {project.name}
@@ -251,7 +251,6 @@ export function Projects() {
                   {project.description}
                 </p>
 
-                {/* TECH */}
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <Badge
@@ -264,7 +263,6 @@ export function Projects() {
                   ))}
                 </div>
 
-                {/* IMPACT */}
                 <div className="pt-4 border-t border-border">
                   <p className="text-sm">
                     <span className="text-accent font-mono">
@@ -276,7 +274,6 @@ export function Projects() {
                   </p>
                 </div>
 
-                {/* BUTTONS */}
                 <div className="flex gap-3 pt-2">
                   {project.github && (
                     <Button

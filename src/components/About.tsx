@@ -62,7 +62,7 @@ export function About() {
 
   return (
     <section id="about" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         {/* Section Title */}
         <motion.div
