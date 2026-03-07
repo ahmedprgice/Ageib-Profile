@@ -33,7 +33,7 @@ export function Projects() {
         {
           name: "Urban Sea Enviro – Multi-Division Business Website",
           description:
-            "Designed the full UX strategy and architecture for a multi-division corporate website covering cleaning services, e-commerce, franchise onboarding and online booking.",
+            "Designed the full UX strategy and architecture for a multi-division corporate website covering cleaning services, franchise onboarding and online booking.",
           tech: [
             "PHP",
             "Responsive Design",
