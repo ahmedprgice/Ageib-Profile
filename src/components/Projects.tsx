@@ -10,6 +10,22 @@ export function Projects() {
   const projects =
     language === "en"
       ? [
+       {
+  name: "NEXORA – Enterprise Workspace Suite",
+  description:
+    "Designed and developed a modern project management and collaboration platform with task boards, real-time notes, chat, workspace organization, and team-based productivity tools.",
+  tech: [
+    "Next.js",
+    "React",
+    "Responsive Design",
+    "Task Management System",
+  ],
+  outcome:
+    "Built a complete collaborative workspace experience with board management, grouped tasks, status tracking, and scalable dashboard architecture.",
+ image: "/images/image.png",
+  isLogo: false,
+  demo: "https://saa-s-project-management-system-1vi.vercel.app/workspace",
+},
         {
           name: "MindfulMe – AI Emotional Support Web App",
           description:
@@ -83,6 +99,22 @@ export function Projects() {
         },
       ]
       : [
+        {
+  name: "NEXORA – منصة إدارة العمل المؤسسي",
+  description:
+    "تم تصميم وتطوير منصة حديثة لإدارة المشاريع والتعاون بين الفرق، تضم لوحات للمهام، ملاحظات فورية، دردشة، تنظيم مساحات العمل، وأدوات إنتاجية مخصصة للفرق.",
+  tech: [
+    "Next.js",
+    "React",
+    "تصميم متجاوب",
+    "نظام إدارة المهام",
+  ],
+  outcome:
+    "تطوير تجربة عمل تعاونية متكاملة تشمل إدارة اللوحات، تجميع المهام، تتبع الحالات، وبنية لوحة تحكم قابلة للتوسع.",
+ image: "/images/image.png",
+  isLogo: false,
+  demo: "https://saa-s-project-management-system-1vi.vercel.app/workspace",
+},
         {
           name: "MindfulMe – منصة دعم عاطفي بالذكاء الاصطناعي",
           description:
