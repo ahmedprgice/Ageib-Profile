@@ -33,17 +33,15 @@ export function Education() {
           highlights: [],
         },
       ];
-
-  const certifications =
-    language === "en"
-      ? [
-     {
+const certifications =
+  language === "en"
+    ? [
+        {
           name: "Career Essentials in Data Analysis",
           issuer: "Microsoft & LinkedIn Learning",
           date: "Oct 2025",
           link: "https://www.linkedin.com/learning/certificates/f2d31a6e92372bf35697264848f5622f1b8713bbc3c0ad479e425e8c81d6330e",
           logo: "/images/microsoft.png",
-          
         },
         {
           name: "Learning Data Analytics: 1 Foundations",
@@ -59,9 +57,23 @@ export function Education() {
           link: "https://www.linkedin.com/learning/certificates/9ee3bae17bf43ebf6d974dc53a163a1c461e9b5778bdf16ab662e43a7ea92ccc?trk=share_certificate",
           logo: "/images/linkedin.png",
         },
+        {
+          name: "Learning SQL Programming",
+          issuer: "LinkedIn Learning",
+          date: "Mar 2026",
+          link: "https://www.linkedin.com/learning/certificates/8f5a36b162a87122dbee109e3d0d6295384f1f02c4aa3e8989891b98e8835c7a?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+        {
+          name: "Introduction to Web APIs",
+          issuer: "LinkedIn Learning",
+          date: "Mar 2026",
+          link: "https://www.linkedin.com/learning/certificates/44f12019bfe8cc4b139866559a2ae2936f173eb864a9559889ceee3b9705640e?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
       ]
-      : [
-         {
+    : [
+        {
           name: "أساسيات تحليل البيانات المهنية",
           issuer: "مايكروسوفت و لينكدإن للتعلم",
           date: "أكتوبر ٢٠٢٥",
@@ -80,6 +92,20 @@ export function Education() {
           issuer: "لينكدإن للتعلم",
           date: "أكتوبر ٢٠٢٥",
           link: "https://www.linkedin.com/learning/certificates/9ee3bae17bf43ebf6d974dc53a163a1c461e9b5778bdf16ab662e43a7ea92ccc?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+        {
+          name: "تعلم برمجة SQL",
+          issuer: "لينكدإن للتعلم",
+          date: "مارس ٢٠٢٦",
+          link: "https://www.linkedin.com/learning/certificates/8f5a36b162a87122dbee109e3d0d6295384f1f02c4aa3e8989891b98e8835c7a?trk=share_certificate",
+          logo: "/images/linkedin.png",
+        },
+        {
+          name: "مقدمة إلى واجهات برمجة تطبيقات الويب",
+          issuer: "لينكدإن للتعلم",
+          date: "مارس ٢٠٢٦",
+          link: "https://www.linkedin.com/learning/certificates/44f12019bfe8cc4b139866559a2ae2936f173eb864a9559889ceee3b9705640e?trk=share_certificate",
           logo: "/images/linkedin.png",
         },
       ];
