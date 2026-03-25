@@ -100,7 +100,7 @@ export function About() {
             {language === "en" ? (
               <>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  I'm a Computer Science student passionate about building
+                  I'm a Computer Science graduate passionate about building
                   practical digital solutions that solve real-world problems.
                 </p>
 
@@ -126,7 +126,7 @@ export function About() {
             ) : (
               <>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  أنا طالب علوم حاسوب شغوف ببناء حلول رقمية عملية تحل مشاكل واقعية.
+                  أنا خريج علوم حاسوب شغوف ببناء حلول رقمية عملية تحل مشاكل واقعية.
                 </p>
 
                 <p className="text-lg text-foreground/80 leading-relaxed">

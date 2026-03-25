@@ -10,12 +10,12 @@ export function Education() {
       ? [
         {
           degree: "Bachelor of Computer Science",
-          specialization: "Data Science",
+          specialization: "",
           institution: "Multimedia University Malaysia (MMU)",
           period: "2023 - 2026",
-          gpa: "3.3/4.0",
+          gpa: "3.34/4.0",
           description:
-            "Focus on Deep Learning, Natural Language Processing, and Reinforcement Learning",
+            "Focus on Data Analytics and Software Development",
           logo: "/images/mmu.png",
           highlights: [],
         },
