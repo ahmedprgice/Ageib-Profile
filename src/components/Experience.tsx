@@ -10,7 +10,7 @@ export function Experience() {
       ? [
           {
             type: "work",
-            role: "Web & Business Project Associate",
+            role: "Data Analyst & Web Developer",
             company: "Urban Sea Enviro · Remote (Part-Time)",
             period: "June 2025 – Present",
             description:

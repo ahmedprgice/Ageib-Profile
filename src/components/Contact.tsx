@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -18,82 +18,88 @@ export function Contact() {
   });
 
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  try {
-    await emailjs.send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    );
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-    toast.success(
-      language === "en"
-        ? "Message sent successfully!"
-        : "تم إرسال الرسالة بنجاح!"
-    );
+      toast.success(
+        language === "en"
+          ? "Message sent successfully!"
+          : "تم إرسال الرسالة بنجاح!"
+      );
 
-    setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "" });
 
-  } catch (error) {
-    toast.error(
-      language === "en"
-        ? "Something went wrong. Try again."
-        : "حدث خطأ، حاول مرة أخرى."
-    );
-  }
-};
+    } catch (error) {
+      toast.error(
+        language === "en"
+          ? "Something went wrong. Try again."
+          : "حدث خطأ، حاول مرة أخرى."
+      );
+    }
+  };
 
 
 
   const socialLinks =
     language === "en"
       ? [
-          {
-            name: "Email",
-            icon: Mail,
-            url: "mailto:ahmedageibemail01@gmail.com",
-            handle: "ahmedageibemail01@gmail.com",
-          },
-          {
-            name: "GitHub",
-            icon: Github,
-            url: "https://github.com/ahmedprgice",
-            handle: "@ahmedprgice",
-          },
-          {
-            name: "LinkedIn",
-            icon: Linkedin,
-            url: "https://www.linkedin.com/in/ahmed-ageib/",
-            handle: "/in/Ahmed Ageib",
-          },
-        ]
+        {
+          name: "Email",
+          icon: Mail,
+          url: "mailto:ahmedageibemail01@gmail.com",
+          handle: "ahmedageibemail01@gmail.com",
+        },
+        {
+          name: "Phone",
+          icon: Phone,
+          url: "tel:+60174071228",
+          handle: "+60 174071228",
+        },
+        {
+          name: "GitHub",
+          icon: Github,
+          url: "https://github.com/ahmedprgice",
+          handle: "@ahmedprgice",
+        },
+        {
+          name: "LinkedIn",
+          icon: Linkedin,
+          url: "https://www.linkedin.com/in/ahmed-ageib/",
+          handle: "/in/Ahmed Ageib",
+        },
+      ]
       : [
-          {
-            name: "البريد الإلكتروني",
-            icon: Mail,
-            url: "mailto:ahmedageibemail01@gmail.com",
-            handle: "ahmedageibemail01@gmail.com",
-          },
-          {
-            name: "جيت هاب",
-            icon: Github,
-            url: "https://github.com/ahmedprgice",
-            handle: "@ahmedprgice",
-          },
-          {
-            name: "لينكدإن",
-            icon: Linkedin,
-            url: "https://www.linkedin.com/in/ahmed-ageib/",
-            handle: "/in/Ahmed Ageib",
-          },
-        ];
+        {
+          name: "البريد الإلكتروني",
+          icon: Mail,
+          url: "mailto:ahmedageibemail01@gmail.com",
+          handle: "ahmedageibemail01@gmail.com",
+        },
+        {
+          name: "جيت هاب",
+          icon: Github,
+          url: "https://github.com/ahmedprgice",
+          handle: "@ahmedprgice",
+        },
+        {
+          name: "لينكدإن",
+          icon: Linkedin,
+          url: "https://www.linkedin.com/in/ahmed-ageib/",
+          handle: "/in/Ahmed Ageib",
+        },
+      ];
 
   return (
     <section id="contact" className="py-24 px-6 bg-card/30">
@@ -132,8 +138,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
         {/* Social Links */}
         <div className="flex justify-center mb-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl w-full">
-            {socialLinks.map((social, index) => (
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full">            {socialLinks.map((social, index) => (
               <a
                 key={index}
                 href={social.url}

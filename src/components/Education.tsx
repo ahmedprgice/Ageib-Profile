@@ -33,9 +33,17 @@ export function Education() {
           highlights: [],
         },
       ];
-const certifications =
-  language === "en"
-    ? [
+
+  const certifications =
+    language === "en"
+      ? [
+        {
+          name: "Dean’s Award (Top Academic Performance)",
+          issuer: "Multimedia University (Faculty of Computing and Informatics)",
+          date: "2024",
+          link: "/images/Deanlis1.jpeg",
+          logo: "/images/mmu.png",
+        },
         {
           name: "Career Essentials in Data Analysis",
           issuer: "Microsoft & LinkedIn Learning",
@@ -44,7 +52,7 @@ const certifications =
           logo: "/images/microsoft.png",
         },
         {
-          name: "Learning Data Analytics: 1 Foundations",
+          name: "Learning Data Analytics: Foundations",
           issuer: "LinkedIn Learning",
           date: "2025",
           link: "https://www.linkedin.com/learning/certificates/40efc6d72569bceaab0ba08500d00627c1e384aeac5274aea95814a4bf433310?trk=share_certificate",
@@ -71,8 +79,22 @@ const certifications =
           link: "https://www.linkedin.com/learning/certificates/44f12019bfe8cc4b139866559a2ae2936f173eb864a9559889ceee3b9705640e?trk=share_certificate",
           logo: "/images/linkedin.png",
         },
+        {
+          name: "Letter of Recommendation",
+          issuer: "Mohammad Hussain, Corporate Accounts Manager, iWISERS Sdn Bhd",
+          date: "Mar 2026",
+          link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
+          logo: "/images/iwisers.png",
+        }
       ]
-    : [
+      : [
+        {
+          name: "جائزة العميد (التفوق الأكاديمي)",
+          issuer: "جامعة الوسائط المتعددة (كلية الحوسبة والمعلوماتية)",
+          date: "2024",
+          link: "",
+          logo: "/images/mmu.png",
+        },
         {
           name: "أساسيات تحليل البيانات المهنية",
           issuer: "مايكروسوفت و لينكدإن للتعلم",
@@ -108,6 +130,13 @@ const certifications =
           link: "https://www.linkedin.com/learning/certificates/44f12019bfe8cc4b139866559a2ae2936f173eb864a9559889ceee3b9705640e?trk=share_certificate",
           logo: "/images/linkedin.png",
         },
+        {
+          name: "خطاب توصية",
+          issuer: "Mohammad Hussain, Corporate Accounts Manager, iWISERS Sdn Bhd",
+          date: "مارس ٢٠٢٦",
+          link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
+          logo: "/images/iwisers.png",
+        }
       ];
 
   return (
@@ -188,7 +217,7 @@ const certifications =
           <h3 className="text-2xl mb-6 flex items-center gap-2">
             <Award className="h-6 w-6 text-accent" />
             {language === "en"
-              ? "Professional Certifications"
+              ? "Professional Certifications & Recommendations Letters"
               : "الشهادات المهنية"}
           </h3>
 
