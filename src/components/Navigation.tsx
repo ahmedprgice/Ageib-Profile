@@ -21,21 +21,23 @@ export function Navigation() {
   const navItems =
     language === "en"
       ? [
-          { name: "About", href: "#about" },
-          { name: "Skills", href: "#skills" },
-          { name: "Projects", href: "#projects" },
-          { name: "Experience", href: "#experience" },
-          { name: "Publications", href: "#publications" },
-          { name: "Contact", href: "#contact" },
-        ]
+        { name: "About", href: "#about" },
+        { name: "Skills", href: "#skills" },
+        { name: "Projects", href: "#projects" },
+        { name: "Experience", href: "#experience" },
+        { name: "Publications", href: "#publications" },
+        { name: "Recommendations", href: "#recommendations" },
+        { name: "Contact", href: "#contact" },
+      ]
       : [
-          { name: "نبذة", href: "#about" },
-          { name: "المهارات", href: "#skills" },
-          { name: "المشاريع", href: "#projects" },
-          { name: "الخبرات", href: "#experience" },
-          { name: "الأبحاث", href: "#publications" },
-          { name: "تواصل", href: "#contact" },
-        ];
+        { name: "نبذة", href: "#about" },
+        { name: "المهارات", href: "#skills" },
+        { name: "المشاريع", href: "#projects" },
+        { name: "الخبرات", href: "#experience" },
+        { name: "الأبحاث", href: "#publications" },
+        { name: "التوصيات", href: "#recommendations" },
+        { name: "تواصل", href: "#contact" },
+      ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -45,11 +47,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">

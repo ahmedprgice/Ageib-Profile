@@ -1,3 +1,4 @@
+import { Recommendations } from './components/Recommendations';
 import { useState } from "react";
 import { Toaster } from "./components/ui/sonner";
 import { Navigation } from "./components/Navigation";
@@ -11,6 +12,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Loader from "./components/Loader";
 
+
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function App() {
@@ -18,7 +20,7 @@ export default function App() {
 
   return (
     <>
-    
+
       <AnimatePresence mode="wait">
         {loading && (
           <Loader onComplete={() => setLoading(false)} />
@@ -41,6 +43,7 @@ export default function App() {
             <Projects />
             <Experience />
             <Education />
+            <Recommendations />
             <Contact />
           </main>
 

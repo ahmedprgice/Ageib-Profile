@@ -110,7 +110,7 @@ export function Contact() {
           <div className="inline-block">
             <h2 className="text-3xl md:text-5xl font-mono tracking-wide leading-tight">
               <span className="text-primary">
-                {language === "en" ? "06." : "٠٦."}
+                {language === "en" ? "07." : "٠٦."}
               </span>{" "}
               <span className="text-foreground">
                 {language === "en" ? "Get In Touch" : "تواصل معي"}

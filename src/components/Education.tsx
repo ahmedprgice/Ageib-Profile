@@ -79,13 +79,7 @@ export function Education() {
           link: "https://www.linkedin.com/learning/certificates/44f12019bfe8cc4b139866559a2ae2936f173eb864a9559889ceee3b9705640e?trk=share_certificate",
           logo: "/images/linkedin.png",
         },
-        {
-          name: "Letter of Recommendation",
-          issuer: "Mohammad Hussain, Corporate Accounts Manager, iWISERS Sdn Bhd",
-          date: "Mar 2026",
-          link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
-          logo: "/images/iwisers.png",
-        }
+
       ]
       : [
         {
@@ -130,13 +124,7 @@ export function Education() {
           link: "https://www.linkedin.com/learning/certificates/44f12019bfe8cc4b139866559a2ae2936f173eb864a9559889ceee3b9705640e?trk=share_certificate",
           logo: "/images/linkedin.png",
         },
-        {
-          name: "خطاب توصية",
-          issuer: "Mohammad Hussain, Corporate Accounts Manager, iWISERS Sdn Bhd",
-          date: "مارس ٢٠٢٦",
-          link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
-          logo: "/images/iwisers.png",
-        }
+
       ];
 
   return (
