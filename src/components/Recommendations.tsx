@@ -9,28 +9,41 @@ export function Recommendations() {
   const recommendations =
     language === "en"
       ? [
-          {
-            text: "Ahmed demonstrated a consistent level of diligence, analytical thinking, and professional maturity. He was able to manage large datasets effectively and consistently delivered accurate, well-structured work.",
-            name: "Mohammad Hussain",
-            role: "Corporate Accounts Manager",
-            company: "iWISERS Sdn Bhd",
-            link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
-          },
-        ]
+        {
+          text: "Ahmed stood out for his diligence, sharp analytical thinking, and professional maturity, excelling in managing complex datasets and delivering accurate, well-structured work. Beyond his technical abilities, he demonstrated excellent communication skills, a collaborative and proactive mindset, and a strong openness to feedback—qualities essential for success in research and professional environments",
+          name: "Mohammad Hussain",
+          role: "Corporate Accounts Manager",
+          company: "iWISERS Sdn Bhd",
+          link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
+        },
+        {
+          text: "I had the pleasure of supervising Ahmed during his Final Year Project, where he consistently showcased excellent academic skills, curiosity, and dedication to excellence. He demonstrated exceptional critical thinking, research, and problem-solving abilities, and showed strong potential as a researcher, especially in Artificial Intelligence.",
+          name: "Suraya Nurain Binti Kalid",
+          role: "Lecturer",
+          company: "Multimedia University, Cyberjaya",
+          link: "/images/Reference Letter-Ahmed Ageib.pdf",
+        },
+      ]
       : [
-          {
-            text: "أظهر أحمد مستوى عالٍ من الاجتهاد والتفكير التحليلي والنضج المهني، وتمكن من التعامل مع مجموعات بيانات كبيرة وتقديم أعمال دقيقة ومنظمة باستمرار.",
-            name: "Mohammad Hussain",
-            role: "مدير الحسابات المؤسسية",
-            company: "iWISERS Sdn Bhd",
-            link: "/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
-          },
-        ];
+        {
+          text: "تميّز أحمد باجتهاده وتفكيره التحليلي الحاد ونضجه المهني، حيث برع في التعامل مع مجموعات بيانات معقدة وتقديم أعمال دقيقة ومنظمة باستمرار. وإلى جانب مهاراته التقنية، أظهر مهارات تواصل ممتازة، وروحًا تعاونية، ومبادرة عالية، واستعدادًا دائمًا لتقبّل الملاحظات—وهي صفات أساسية للنجاح في البيئات الأكاديمية والمهنية",
+          name: "Mohammad Hussain",
+          role: "مدير الحسابات المؤسسية",
+          company: "iWISERS Sdn Bhd",
+          link: "/images/Recommendation_Letter_Ahmed_Mohammed_Ageib.pdf",
+        },
+        {
+          text: "كان لي شرف الإشراف على أحمد خلال مشروع التخرج، حيث أظهر باستمرار مهارات أكاديمية ممتازة وفضولًا علميًا والتزامًا واضحًا بالتميز. كما أظهر قدرات استثنائية في التفكير النقدي والبحث وحل المشكلات، وبرزت لديه إمكانات قوية كباحث، خاصة في مجال الذكاء الاصطناعي.",
+          name: "Suraya Nurain Binti Kalid",
+          role: "محاضِرة",
+          company: "Multimedia University, Cyberjaya",
+          link: "/images/Reference Letter-Ahmed Ageib.pdf",
+        },
+      ];
 
   return (
     <section id="recommendations" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-
         {/* TITLE (same as Projects) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,12 +64,13 @@ export function Recommendations() {
 
             <div className="mt-4 mb-6 h-px w-full bg-gradient-to-r from-cyan-400 to-blue-500" />
           </div>
-<div class="text-center mb-12">
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {language === "en"
-              ? "What colleagues and supervisors say about working together."
-              : "ما يقوله الزملاء والمشرفون عن العمل معي."}
-          </p>
+
+          <div className="text-center mb-12">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              {language === "en"
+                ? "What colleagues and supervisors say about working together."
+                : "ما يقوله الزملاء والمشرفون عن العمل معي."}
+            </p>
           </div>
         </motion.div>
 
@@ -85,13 +99,9 @@ export function Recommendations() {
                   {rec.name}
                 </h4>
 
-                <p className="text-sm text-primary">
-                  {rec.role}
-                </p>
+                <p className="text-sm text-primary">{rec.role}</p>
 
-                <p className="text-xs text-muted-foreground">
-                  {rec.company}
-                </p>
+                <p className="text-xs text-muted-foreground">{rec.company}</p>
               </div>
 
               {/* Button */}
@@ -101,18 +111,15 @@ export function Recommendations() {
                   className="bg-primary text-primary-foreground hover:bg-primary/90"
                   asChild
                 >
-                  <a href={rec.link} target="_blank">
+                  <a href={rec.link} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    {language === "en"
-                      ? "View Full Letter"
-                      : "عرض الخطاب"}
+                    {language === "en" ? "View Full Letter" : "عرض الخطاب"}
                   </a>
                 </Button>
               </div>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );
