@@ -23,6 +23,13 @@ export function Recommendations() {
           company: "Multimedia University, Cyberjaya",
           link: "/images/Reference Letter-Ahmed Ageib.pdf",
         },
+        {
+          text: "Ahmed is a highly reliable and driven individual who consistently delivers high-quality results. His ability to quickly learn, adapt, and collaborate makes him a valuable team member. I strongly recommend him for any role involving data, AI, or problem-solving.",
+          name: "Jeyraj Maran",
+          role: "Director | Head of Marketing",
+          company: "Urban Sea Enviro Sdn Bhd",
+          link: "https://www.linkedin.com/in/ahmed-ageib/details/recommendations/", // LinkedIn profile
+        }
       ]
       : [
         {
